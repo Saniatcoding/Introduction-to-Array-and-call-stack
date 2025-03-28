@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+        h2{
+            align-items: center;
+            background-color: bisque;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 500;
+            justify-content: center;
+            display: flex;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h2>Javascript object Data Structure and Array</h2>
+
+    <p id="myjoin"></p>
+    <p id="myfirstpop"></p>
+    <p id="mysecondpop"></p>
+
+    <script>
+      var student = {
+        name: "Thomas Shelby",
+        age: 34,
+        profession: "Mogger",
+        hobby: "Acting",
+      };
+      
+      document.write(`My name is ${student.name}<br>`);
+      document.write(`My age is ${student.age}<br>`);
+      document.write(`My profession is ${student.profession}<br>`);
+      document.write(`My hobby is ${student.hobby}<br>`);
+
+      var gangs = [
+        "Peaky Blinders",
+        "Kray Twins",
+        "Birmingham Boys",
+        "Sabini Gang",
+      ];
+
+      for (i = 0; i < gangs.length; i++) {
+        document.write(`<br>${i + 1}. ${gangs[i]}`);
+      }
+
+      document.getElementById("myjoin").innerHTML = gangs.join("  --  ");
+
+      gangs.pop();
+      document.getElementById("myfirstpop").innerHTML =
+        gangs.join("  (*__*)  ");
+
+      gangs.pop();
+      document.getElementById("mysecondpop").innerHTML =
+        gangs.join("  (^..^)  ");
+    </script>
+  </body>
+</html>
